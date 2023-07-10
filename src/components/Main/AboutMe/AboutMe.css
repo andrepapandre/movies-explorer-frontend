@@ -1,0 +1,170 @@
+.about-me {
+    padding-top: 110px;
+    padding-bottom: 100px;
+    max-width: 1280px;
+    width: calc(100% - 140px);
+    background-color: #202020;
+    margin: 0 auto;
+
+}
+
+.about-me-test {
+
+    font-size: 150px;
+    color: wheat;
+
+
+}
+
+.about-me__block {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    width: 100%;
+
+    margin-top: 66px;
+}
+
+.about-me__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin-right: 15px;
+    margin: o auto;
+
+
+}
+
+.about-me__title {
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -2px;
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+.about-me__subtitle {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 26px;
+
+}
+
+.about-me__description {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+    margin-bottom: auto
+}
+
+.about-me__github {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+.about-me__photo {
+    width: 270px;
+    height: 327px;
+    align-self: center;
+}
+
+
+@media screen and (max-width: 1023px) {
+
+    .about-me {
+        width: calc(100% - 100px);
+    }
+
+
+    .about-me__title {
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+
+    .about-me__subtitle {
+        font-size: 12px;
+        margin-bottom: 20px;
+
+    }
+
+    .about-me__description {
+        font-size: 12px;
+    }
+
+    .about-me__photo {
+        width: 225px;
+        height: 307px;
+        border-radius: 10px;
+
+        align-self: center;
+    }
+
+    .about-me__info {
+        margin-right: 40px;
+
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .about-me {
+        width: calc(100% - 28px);
+        padding-block: 70px;
+    }
+
+
+    .about-me__block {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .about-me__photo {
+        align-self: center;
+        margin-bottom: 40px;
+    }
+
+    .about-me__title {
+        font-size: 40px;
+    }
+
+    .about-me__subtitle {
+        font-size: 12px;
+
+    }
+
+    .about-me__info {
+        margin-right: 0px;
+        align-self: center;
+
+
+    }
+
+    .about-me__description {
+        margin-bottom: 40px;
+    }
+
+
+    .about-me__photo {
+        width: 225px;
+        height: 307px;
+        align-self: center;
+    }
+}
