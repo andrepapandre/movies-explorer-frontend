@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Header from "../Header/Header";
 import Main from "../Main/Main"
 import Movies from "../Movies/Movies";
@@ -9,22 +10,45 @@ import NotFound from "../NotFound/NotFound";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom"; // импортируем Routes
 import Profile from "../Profile/Profile"
 import SavedMovies from "../SavedMovies/SavedMovies"
+import BurgerPopup from '../BurgerPopup/BurgerPopup';
 
 function App() {
+  const [ThemeHeader, SetThemeHeader] = useState("header_white");
+  const [isBurgerPopupOpen, setIsBurgerPopupOpen] = useState(false);
+
+  const onBurgerPopup = () => {
+    return setIsBurgerPopupOpen(!isBurgerPopupOpen)
+  }
+
+  const closeAllPopups = () => {
+    setIsBurgerPopupOpen(false)
+  };
+
   return (
     <div className="App">
+
+      <BurgerPopup
+        isOpen={isBurgerPopupOpen}
+        onClose={closeAllPopups}
+      />
+
       <Routes>
         <Route
           path="/"
-          element={<Main />}
+          element={<Main ThemeHeader={SetThemeHeader}
+            Theme={ThemeHeader} />}
         />
         <Route
           path="/movies"
-          element={<Movies />}
+          element={<Movies ThemeHeader={SetThemeHeader}
+            Theme={ThemeHeader}
+            onBurgerPopup={onBurgerPopup}
+          />}
         />
         <Route
           path="/saved-movies"
-          element={<SavedMovies />
+          element={<SavedMovies ThemeHeader={SetThemeHeader}
+            Theme={ThemeHeader} />
           }
         />
         <Route
@@ -34,17 +58,20 @@ function App() {
         />
         <Route
           path="/profile"
-          element={<Profile />}
+          element={<Profile
+            onBurgerPopup={onBurgerPopup} />}
         />
         <Route
-          path="/sign-in"
+          path="/signin"
           element={<Login />}
         />
         <Route
-          path="/sign-up"
+          path="/signup"
           element={<Register />}
         />
       </Routes>
+
+
     </div>
   );
 }

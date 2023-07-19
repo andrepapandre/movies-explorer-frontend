@@ -4,8 +4,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-block: 70px;
-    max-width: 358px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    max-width: 396px;
     background: #202020;
 }
 
@@ -17,7 +18,7 @@
 .register__title {
     align-self: flex-start;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     margin-top: 40px;
     color: #FFF;
     font-size: 24px;
@@ -62,15 +63,19 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    height: 27px;
+    height: 28px;
     padding: 0;
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     outline: 0;
     max-width: 396px;
     border: none;
     background-color: #202020;
     border-bottom: 1px solid #424242;
+}
+
+.register__input:focus {
+    outline: 1px solid #4285F4;
 }
 
 .register__input:last-of-type {
@@ -94,8 +99,7 @@
 
 .register__button {
     width: 100%;
-    height: 50px;
-    margin-top: 216px;
+    margin-top: 155px;
     padding: 14px;
     border-style: none;
 
@@ -120,4 +124,50 @@
     line-height: normal;
     text-decoration: none;
 
+}
+
+@media screen and (max-width: 1023px) {
+    .register__window {
+        padding-top: 232px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .register__window {
+        padding-top: 57px;
+        max-width: 260px;
+
+    }
+
+    .register__logo {
+        align-self: center;
+    }
+
+    .register__title {
+        align-self: center;
+        margin-top: 48px;
+        margin-bottom: 81px;
+    }
+
+    .register__input {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        height: 27px;
+        margin-bottom: 29px;
+    }
+
+
+    .register__label {
+        color: #8B8B8B;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }

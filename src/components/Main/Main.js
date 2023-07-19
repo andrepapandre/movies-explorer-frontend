@@ -1,6 +1,5 @@
 import Promo from "./Promo/Promo"
 import Header from "../Header/Header"
-import NavTab from "./NavTab/NavTab"
 import AboutProject from "./AboutProject/AboutProject"
 import Techs from "./Techs/Techs"
 import AboutMe from "./AboutMe/AboutMe"
@@ -11,21 +10,23 @@ import logo from "../../image/logo.svg"
 import "../Header/Header.css"
 
 
-export default function Main() {
+export default function Main({ ThemeHeader, Theme }) {
     return (
         <>
-            <Header>
-                <img className="header__logo" src={logo} />
+            <Header ThemeHeaderS={Theme}>
+                <img className="header__logo" src={logo} alt="Логотип хедера" />
                 <div className="header__auth">
-                    <NavLink className="header__signup" to="/sign-up">Регистрация</NavLink>
-                    <NavLink className="header__signin" to="/sign-in">Войти</NavLink>
+                    <button className="header__signup"><NavLink className="header__signup-link" to="/signup">Регистрация</NavLink></button>
+                    <button className="header__signin"><NavLink className="header__signin-link" to="/signin">Войти</NavLink></button>
                 </div>
             </Header>
-            <Promo />
-            <AboutProject />
-            <Techs />
-            <AboutMe />
-            <Portfolio />
+            <main>
+                <Promo />
+                <AboutProject />
+                <Techs />
+                <AboutMe />
+                <Portfolio />
+            </main>
             <Footer />
         </>
 

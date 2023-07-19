@@ -2,12 +2,19 @@
     display: flex;
     justify-content: space-between;
     max-width: 1280px;
-    width: calc(100% - 140px);
-    margin-top: 18px;
-    margin-bottom: 18px;
-    margin: 0 auto;
-    margin-bottom: -74px;
-    margin-top: 18px;
+    padding-right: 70px;
+    padding-left: 70px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    align-items: center;
+}
+
+.header_black {
+    background-color: #202020;
+}
+
+.header_white {
+    background-color: #5C5C5C;
 }
 
 .header__logo {
@@ -21,9 +28,17 @@
 }
 
 .header__signup {
-    margin-right: 30px;
     margin-top: 10px;
+    margin-right: 30px;
+    text-decoration: none;
+    border-style: none;
+    background-color: #5C5C5C;
+    margin-top: -3px;
+    margin-right: 24px;
 
+}
+
+.header__signup-link {
     color: #FFF;
     text-align: right;
     font-size: 12px;
@@ -31,13 +46,14 @@
     font-weight: 500;
     line-height: 16px;
     text-decoration: none;
-
 }
+
 
 .header__signin {
     border-radius: 3px;
     background: #2BE080;
-    width: 70px;
+    margin-top: 2px;
+    width: 76px;
     height: 32px;
     text-align: center;
     text-decoration: none;
@@ -45,13 +61,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-style: none;
+
+}
+
+.header__signin-link {
     color: #000;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
-}
+    text-decoration: none;
 
+}
 
 .header__movies {
     color: #FFF;
@@ -112,20 +134,66 @@
     justify-content: center;
     align-self: center;
     background: #313131;
-;
+    ;
 
 }
 
-@media screen and (max-width: 1023px) {
-    .header{
-        width: calc(100% - 60px);
+.header__burger {
+    display: none;
+}
 
+
+
+@media screen and (max-width: 1023px) {
+    .header {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .header__auth {
+        display: none;
+    }
+
+    .header__burger {
+        display: inline;
+        background-image: url("../../image//burger.svg");
+        background-color: initial;
+        border-style: none;
+        height: 44px;
+        width: 44px;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .header{
-        width: calc(100% - 28px);
-
+    .header {
+        padding-right: 14px;
+        padding-left: 14px;
     }
+
+    .header__signin {
+        width: 54px;
+        height: 24px;
+        color: #000;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+    .header__signup {
+        width: 64px;
+        height: 16px;
+        margin-right: 14px;
+        margin-top: 5px;
+        color: #FFF;
+        text-align: right;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+
 }

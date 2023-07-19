@@ -15,7 +15,7 @@
     font-weight: 400;
     line-height: normal;
     margin-top: 184px;
-    margin-bottom: 0px;
+    margin-bottom: 6px;
 
 }
 
@@ -30,7 +30,13 @@
     margin-top: 0px;
 }
 
-.not-found__return {
+.not-found__return{
+    background-color: #202020;
+    border-style: none;
+}
+
+
+.not-found__return-text {
     color: #4285F4;
     text-align: center;
     font-size: 14px;

@@ -3,62 +3,64 @@ import "./Register.css"
 import { Link, useNavigate } from "react-router-dom";
 import logoImg from "../../image/logo-auth.svg"
 
-function Register({ isLogged, onRegister }) {
-    //   const [userData, setUserData] = React.useState({
-    //     email: "",
-    //     password: "",
-    //   });
+function Register() {
 
-    //   const handleChange = useCallback(
-    //     (e) => {
-    //       const { name, value } = e.target;
-    //       setUserData({
-    //         ...userData,
-    //         [name]: value,
-    //       });
-    //     },
-    //     [userData]
-    //   );
+    const [name, setName] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [password, setPassword] = React.useState("");
 
-    //   const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     onRegister(userData);
-    //   };
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value)
+    }
 
-    //   if (isLogged) {
-    //     return <React.Redirect to="/" />;
-    //   }
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleNameChange = (e) => {
+        setName(e.target.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
 
     return (
-        <>
+        <main>
             <div className="register__window">
-                <img src={logoImg} className="register__logo" />
-                <h3 className="register__title">Регистрация</h3>
-                <form onSubmit="" className="register__form">
+                <img src={logoImg} className="register__logo" alt="Логотип проектной работы" />
+                <h1 className="register__title">Добро пожаловать!</h1>
+                <form onSubmit={handleSubmit} className="register__form">
                     <label className="register__label">Имя</label>
                     <input
                         id="name"
                         name="name"
                         type="string"
                         placeholder="Виталий"
-                        value=""
+                        required={true}
+                        value={name}
+                        onChange={handleNameChange}
                         className="register__input"
                     />
                     <label className="register__label">Email</label>
                     <input
-                        autoComplete="true"
+                        required={true}
                         name="email"
                         type="email"
-                        placeholder="pochta@yandex.ru|"
+                        value={email}
+                        onChange={handleEmailChange}
+                        placeholder="test@yandex.ru"
                         className="register__input"
                     />
                     <label className="register__label">Пароль</label>
                     <input
-                        autoComplete="true"
+                        required={true}
                         name="password"
                         type="password"
-                        placeholder="Пароль"
-                        value="Пароль"
+                        placeholder="*************"
+                        value={password}
+                        onChange={handlePasswordChange}
                         className="register__input"
                     />
                     <button type="submit" className="register__button">
@@ -66,10 +68,10 @@ function Register({ isLogged, onRegister }) {
                     </button>
                 </form>
                 <Link className="register__reg" to="/sign-in">
-                    Уже Зарегистрированны? <span className="register__reg-default">Войти</span>
+                    Уже зарегистрированы? <span className="register__reg-default">Войти</span>
                 </Link>
             </div>
-        </>
+        </main>
     );
 }
 

@@ -2,7 +2,6 @@
     max-width: 1280px;
     background-color: #5C5C5C;
     padding-block: 75px;
-
 }
 
 .promo__image-and-text {
@@ -11,7 +10,6 @@
     justify-content: space-between;
     width: calc(100% - 140px);
     margin: 0 auto;
-    margin-top: 75px;
 
 }
 
@@ -22,28 +20,29 @@
 }
 
 .promo__main {
-    text-align: left;
 
+    text-align: left;
     color: #FFF;
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
     line-height: 58px;
     max-width: 640px;
-    width: 100%;
-    margin-bottom: 36px;
     margin-top: 0px;
+    margin-bottom: 36px;
 }
+
 
 .promo__description {
     color: #FFF;
+    font-family: Inter;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    opacity: 0.5;
+    line-height: normal;
     max-width: 310px;
     margin: 0;
-    margin-bottom: 142px;
+    margin-bottom: 147px;
 
 }
 
@@ -71,6 +70,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
+    text-decoration: none;
 }
 
 .promo__more-info-button:hover {
@@ -80,6 +80,11 @@
 
 
 @media screen and (max-width: 1024px) {
+    .promo__section {
+        padding-top: 140px;
+        padding-bottom: 66px;
+    }
+
     .promo__image-and-text {
         flex-direction: column-reverse;
         justify-content: center;
@@ -94,7 +99,8 @@
         font-weight: 400;
         line-height: 50px;
         margin-top: 48px;
-        margin-bottom: 22px;
+        margin-bottom: 23px;
+        max-width: 680px;
 
     }
 
@@ -102,10 +108,13 @@
         align-self: center;
         text-align: center;
         margin-bottom: 92px;
+        max-width: 260px;
+        width: 100%;
     }
 
     .promo__more-info-button {
         align-self: center;
+        margin-bottom: 10px;
     }
 
 }
@@ -113,9 +122,12 @@
 @media screen and (max-width: 767px) {
 
     .promo__section {
-        padding-block: 30px;
+        padding-top: 70px;
+        padding-bottom: 30px;
 
     }
+
+
 
     .promo__image-and-text {
         width: calc(100% - 20px);
@@ -137,10 +149,19 @@
         letter-spacing: -1.2px;
         margin-top: 44px;
         margin-bottom: 24px;
+        max-width: 680px;
+
 
     }
 
     .promo__description {
         margin-bottom: 80px;
     }
+
+
+    .promo__more-info-button {
+        align-self: center;
+        margin-bottom: 0px;
+    }
+
 }

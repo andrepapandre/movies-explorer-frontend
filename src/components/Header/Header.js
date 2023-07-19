@@ -4,13 +4,15 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 
 
-export default function Header({ children }) {
+export default function Header({ children, ThemeHeaderS}) {
+
     return (
         <>
-            <header className="header">
+            <header className={`header ${ThemeHeaderS}`}>
                 {children}
             </header>
         </>
     )
 };
+
 

@@ -10,10 +10,10 @@ export default function Footer() {
                 <p className="footer__text">Учебный проект Яндекс.Практикум х BeatFilm.</p>
                 <div className="footer__block">
                     <p className="footer__date">© 2020</p>
-                    <div className="footer__links">
-                        <NavLink className="footer__link" to="/">Яндекс.Практикум</NavLink>
-                        <NavLink className="footer__link" to="/">Github</NavLink>
-                    </div>
+                    <ul className="footer__links">
+                        <li className="footer__link-li"><NavLink className="footer__link" to="https://practicum.yandex.ru">Яндекс.Практикум</NavLink></li>
+                        <li className="footer__link-li"><NavLink className="footer__link" to="https://github.com/andrepapandre">Github</NavLink></li>
+                    </ul>
                 </div>
             </footer>
         </>
