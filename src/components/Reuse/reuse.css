@@ -1,0 +1,31 @@
+.title-reuse {
+    height: 48px;
+    max-width: 1280px;
+    width: 100%;
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+    border-bottom: 1px solid #DADADA;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0 auto;
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .title-reuse {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.72px;
+    }
+
+}

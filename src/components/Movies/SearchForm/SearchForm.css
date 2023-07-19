@@ -1,0 +1,114 @@
+.search-form {
+    max-width: 1280px;
+    width: calc(100% - 140px);
+    height: 100px;
+    background: #202020;
+    padding-bottom: 48px;
+    padding-top: 70px;
+    margin: 0 auto;
+
+
+}
+
+.search-form__block-of-search {
+    height: 47px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #424242;
+    max-width: 1140px;
+    width: calc(100% - 140px);
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 33px;
+}
+
+.search-form__input {
+    color: #8B8B8B;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #202020;
+    border-style: none;
+    margin-bottom: 13px;
+    outline: none;
+}
+
+.search-form__input:focus {
+    outline: 1px solid #4285F4;
+}
+
+.search-form__search-button {
+    color: #FFF;
+    text-align: center;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+
+    border-radius: 48px;
+    background: #4285F4;
+    width: 58.65px;
+    height: 34px;
+    border-style: none;
+
+}
+
+.search-form__block-of-checkbox {
+    max-width: 1140px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0 auto;
+
+}
+
+
+.search-form__label {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 1024px) {
+    .search-form {
+        width: calc(100% - 60px);
+        padding-top: 80px;
+        padding-bottom: 57px;
+    }
+
+    .search-form__block-of-search {
+        margin-bottom: 29px;
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .search-form {
+        width: calc(100% - 28px);
+        padding-top: 84px;
+        padding-bottom: 53px;
+
+    }
+
+    .search-form__input {
+        color: #8B8B8B;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .search-form__block-of-search {
+        margin-bottom: 36px;
+    }
+
+
+}

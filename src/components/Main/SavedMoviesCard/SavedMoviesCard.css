@@ -1,0 +1,110 @@
+.saved-movies-card {
+    width: 100%;
+    display: grid;
+    padding: 0;
+    grid-template-areas:
+        "saved-movies-card__link saved-movies-card__link"
+        "saved-movies-card__title  saved-movies-card__close-button"
+        "saved-movies-card__line saved-movies-card__line"
+        "saved-movies-card__duration saved-movies-card__duration"
+}
+
+.saved-movies-card__image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    grid-area: saved-movies-card__image;
+}
+
+
+
+
+.saved-movies-card__title {
+    min-height: 24px;
+    max-height: 32px;
+    max-width: 226px;
+    width: 100%;
+    color: #FFF;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    grid-area: saved-movies-card__title;
+    justify-self: start;
+    padding-top: 9px;
+
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.saved-movies-card__link {
+    text-decoration: none;
+    grid-area: saved-movies-card__link;
+}
+
+.saved-movies-card__close-button {
+    grid-area: saved-movies-card__close-button;
+    border-style: none;
+    background-color: #202020;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    justify-self: end;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding-top: 9px;
+}
+
+.sad {
+    opacity: 1;
+}
+
+
+.saved-movies-card__line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #424242;
+    margin: 0;
+    grid-area: saved-movies-card__line;
+    margin-top: 25px;
+    margin-bottom: 6px;
+
+
+}
+
+.saved-movies-card__duration {
+    color: #8B8B8B;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    grid-area: saved-movies-card__duration;
+
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .saved-movies-card {}
+
+
+}
+
+@media screen and (max-width: 724px) {
+
+    .saved-movies-card {
+        max-width: 450px;
+        width: 100%;
+    }
+
+}
